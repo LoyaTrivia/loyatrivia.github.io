@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loya Trivia | Mobil Bilgi Yarışması Oyunu</title>
+    <meta
+      name="description"
+      content="Loya Trivia ile günlük quizler çöz, arkadaşlarınla bire bir kapış, grup mücadelelerine katıl, jokerlerle hamle yap ve liderlik tablosunda yüksel. iOS ve Android için Türkçe trivia oyunu."
+    />
+    <meta name="theme-color" content="#ff8c00" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Loya Trivia — Mobil Bilgi Yarışması" />
+    <meta
+      property="og:description"
+      content="Bilgini eğlenceli ve rekabetçi bir mobil trivia deneyimine dönüştür."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://loyaonline.com/" />
+    <meta property="og:image" content="assets/img/app-icon.png" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="canonical" href="https://loyaonline.com/" />
+    <link rel="icon" href="assets/img/app-icon.png" />
+    <link rel="apple-touch-icon" href="assets/img/app-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Fonts (Nunito — same as the app) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MobileApplication",
+        "name": "Loya Trivia",
+        "operatingSystem": "ANDROID, IOS",
+        "applicationCategory": "GameApplication",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY" },
+        "publisher": { "@type": "Organization", "name": "Loya Online" }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Loya Trivia ana sayfa">
+        <img src="assets/img/app-icon.png" alt="Loya Trivia logo" />
+        <span data-app-name>Loya Trivia</span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Menüyü aç/kapat"
+        aria-expanded="false"
+        data-nav-toggle
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" data-nav>
+        <a href="#modlar">Oyun Modları</a>
+        <a href="#nasil">Nasıl Oynanır</a>
+        <a href="#uygulama">Uygulama</a>
+        <a href="#sss">S.S.S.</a>
+        <a class="nav-cta" href="#indir">İndir</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ============================================================ HERO -->
+      <section class="hero wrap" id="indir">
+        <div class="hero-bg" aria-hidden="true">
+          <span class="blob blob-1"></span>
+          <span class="blob blob-2"></span>
+        </div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">🎯 Mobil bilgi yarışması</p>
+          <h1>Bilgini <span class="hl">oyuna</span> çevir.</h1>
+          <p class="hero-lead">
+            Günlük quizler, bire bir kapışmalar, grup mücadeleleri ve
+            jokerlerle dolu Türkçe trivia deneyimi. Doğru cevapla, puan topla,
+            liderlik tablosunda zirveye çık.
+          </p>
+
+          <div class="store-row">
+            <a
+              class="store-badge store-badge--google"
+              href="#indir"
+              data-store="googlePlay"
+              aria-label="Google Play'den indir"
+            >
+              <img src="assets/img/badge-google-play.svg" alt="Google Play'den indir" />
+            </a>
+            <a
+              class="store-badge store-badge--apple"
+              href="#indir"
+              data-store="appStore"
+              aria-label="App Store'dan indir"
+            >
+              <img src="assets/img/badge-app-store.svg" alt="App Store'dan indir" />
+            </a>
+          </div>
+
+          <div class="rating-row">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <span>iOS &amp; Android · Ücretsiz · Türkçe</span>
+          </div>
+        </div>
+
+        <div class="phone-stage" aria-label="Loya Trivia uygulama önizlemesi">
+          <span class="spark spark-q" aria-hidden="true">?</span>
+          <span class="spark spark-coin" aria-hidden="true">★</span>
+          <span class="spark spark-badge" aria-hidden="true">🏆</span>
+          <span class="spark spark-check" aria-hidden="true">✓</span>
+          <div class="device device--hero" data-hero-device></div>
+        </div>
+      </section>
+
+      <!-- =========================================================== STATS -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="stats-strip reveal">
+            <div>
+              <strong data-stat-modes>4</strong>
+              <span>Oyun modu</span>
+            </div>
+            <div>
+              <strong data-stat-jokers>4</strong>
+              <span>Joker tipi</span>
+            </div>
+            <div>
+              <strong>TR</strong>
+              <span>Türkçe deneyim</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>Platform: iOS + Android</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================== MODES -->
+      <section class="section" id="modlar" style="padding-top: 0">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">🕹️ Her mola bir meydan okuma</p>
+            <h2>Tek başına oyna, arkadaşlarınla kapış, sıralamada yüksel.</h2>
+            <p class="lead">
+              Loya Trivia'da her oyun modu farklı bir heyecan sunar. İster
+              kendini test et, ister rakiplerinle yarış.
+            </p>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <img src="assets/img/icons/daily-quiz.svg" alt="" />
+              </div>
+              <h3>Günlük Quiz</h3>
+              <p>
+                Her gün taze sorularla pratik yap, serini bozma ve puanını
+                düzenli büyüt.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <img src="assets/img/icons/one-vs-one.svg" alt="" />
+              </div>
+              <h3>Bire Bir Kapışma</h3>
+              <p>
+                Arkadaşına meydan oku ya da rakip bul; en hızlı ve en doğru olan
+                kazanır.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <img src="assets/img/icons/group-battle.svg" alt="" />
+              </div>
+              <h3>Grup Mücadelesi</h3>
+              <p>
+                Çok oyunculu odalarda aynı anda yarış; bilgini kalabalığa karşı
+                kanıtla.
+              </p>
+            </article>
+            <article class="feature-card reveal">
+              <div class="feature-icon">
+                <img src="assets/img/icons/self-challenge.svg" alt="" />
+              </div>
+              <h3>Kişisel Meydan Okuma</h3>
+              <p>
+                Kategoriyi, soru sayısını ve süreyi sen belirle; kendi rekorunu
+                kır, sınırlarını zorla.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== HOW TO PLAY -->
+      <section class="section" id="nasil">
+        <div class="wrap split">
+          <div class="reveal">
+            <p class="eyebrow">⚡ Nasıl oynanır?</p>
+            <h2>Kurallar sade, tempo yüksek.</h2>
+            <p class="lead">
+              Soruları süre dolmadan cevapla. Doğru cevaplar puan kazandırır,
+              yanlışlar puan kaybettirir. Zorlandığında jokerler devrede.
+              Hızlı ve doğru oynayanlar liderlik tablosunda yükselir.
+            </p>
+            <a class="btn btn-primary" href="#indir">Hemen oynamaya başla</a>
+          </div>
+          <div class="rules-list reveal">
+            <div class="rule good">
+              <span class="rule-badge" data-rule-correct>+5</span>
+              <span>Her doğru cevap için puan kazan.</span>
+            </div>
+            <div class="rule bad">
+              <span class="rule-badge" data-rule-wrong>-2</span>
+              <span>Her yanlış cevap puan kaybettirir.</span>
+            </div>
+            <div class="rule coin">
+              <span class="rule-badge" data-rule-joker>4</span>
+              <span>Joker kullanım bedeli (coin). Her jokeri bir kez kullan.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== SHOWCASE -->
+      <section class="section showcase" id="uygulama">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">📱 Uygulama hissi</p>
+            <h2>Canlı, hızlı ve rekabet odaklı bir trivia deneyimi.</h2>
+            <p class="lead">
+              Liderlik tabloları, rozetler, coinler ve jokerler — hepsi tek bir
+              akıcı uygulamada.
+            </p>
+          </div>
+
+          <div class="showcase-grid">
+            <div class="mini-screen reveal">
+              <div class="mini-header">
+                <img src="assets/img/avatars/1.png" alt="" />
+                <span>Bugünün liderleri</span>
+              </div>
+              <ol class="leader-list">
+                <li>
+                  <span class="rank">1</span> Zeynep <strong>9.850</strong>
+                </li>
+                <li>
+                  <span class="rank">2</span> Deniz <strong>8.420</strong>
+                </li>
+                <li>
+                  <span class="rank">3</span> Mert <strong>7.930</strong>
+                </li>
+                <li>
+                  <span class="rank">4</span> Sen <strong>7.640</strong>
+                </li>
+              </ol>
+            </div>
+
+            <div class="mini-screen accent reveal">
+              <div class="badge-big" aria-hidden="true">🏅</div>
+              <h3>Rozetleri Topla</h3>
+              <p>
+                Seriler, doğru cevaplar ve yarışma başarılarıyla profilini
+                güçlendir, ilerlemeni göster.
+              </p>
+            </div>
+
+            <div class="mini-screen reveal">
+              <div class="coin-bank">
+                <img src="assets/img/icons/coin.svg" alt="" /> 320
+              </div>
+              <h3>Jokerlerle hamle yap</h3>
+              <p>Zor sorularda dört farklı joker seni kurtarır:</p>
+              <div class="lifeline-grid">
+                <div class="lifeline-chip">
+                  <img src="assets/img/icons/lifeline-fiftyfifty.svg" alt="" />
+                  50-50
+                </div>
+                <div class="lifeline-chip">
+                  <img
+                    src="assets/img/icons/lifeline-audiencepoll.svg"
+                    alt=""
+                  />
+                  Seyirci
+                </div>
+                <div class="lifeline-chip">
+                  <img src="assets/img/icons/lifeline-resettime.svg" alt="" />
+                  Süre
+                </div>
+                <div class="lifeline-chip">
+                  <img src="assets/img/icons/lifeline-skip.svg" alt="" /> Pas
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ====================================================== SCREENSHOTS -->
+      <!-- Hidden until media.screenshots is filled in site-config.js.
+           main.js populates the row and reveals this section. -->
+      <section class="section shots-section" id="ekranlar" data-shots-section hidden>
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">📸 Ekran görüntüleri</p>
+            <h2>Loya Trivia'ya yakından bak.</h2>
+            <p class="lead">Oyun, uygulamada nasıl görünüyor? İşte birkaç kare.</p>
+          </div>
+          <div class="shots-row" data-shots-row></div>
+        </div>
+      </section>
+
+      <!-- ============================================================= FAQ -->
+      <section class="section" id="sss">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">💬 Merak edilenler</p>
+            <h2>Sık sorulan sorular</h2>
+          </div>
+
+          <div class="faq-list">
+            <article class="faq-item reveal" data-faq-item>
+              <button type="button" data-faq-question aria-expanded="false">
+                Loya Trivia ücretsiz mi?
+              </button>
+              <div class="faq-body">
+                <p>
+                  Evet. Loya Trivia ücretsiz olarak indirilip oynanabilir.
+                  İsteğe bağlı uygulama içi satın almalar ve reklamlar
+                  bulunabilir.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-faq-item>
+              <button type="button" data-faq-question aria-expanded="false">
+                Uygulama şu an indirilebilir mi?
+              </button>
+              <div class="faq-body">
+                <p data-prelaunch-faq>
+                  Henüz değil. Loya Trivia yayın hazırlığında. App Store ve
+                  Google Play yayınları tamamlandığında indirme bağlantıları
+                  otomatik aktif edilecek.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-faq-item>
+              <button type="button" data-faq-question aria-expanded="false">
+                Hangi platformlarda yer alacak?
+              </button>
+              <div class="faq-body">
+                <p>
+                  Android ve iOS için hazırlanıyor. Android paket adı
+                  <code data-android-package></code>, iOS bundle ID
+                  <code data-ios-bundle></code>.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-faq-item>
+              <button type="button" data-faq-question aria-expanded="false">
+                Jokerler nasıl çalışır?
+              </button>
+              <div class="faq-body">
+                <p>
+                  Dört joker tipi vardır: 50-50, Seyirci Oylaması, Süreyi Yenile
+                  ve Soruyu Geç. Her joker bir seviyede yalnızca bir kez
+                  kullanılabilir ve coin karşılığında çalışır.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item reveal" data-faq-item>
+              <button type="button" data-faq-question aria-expanded="false">
+                Destek için nereye yazabilirim?
+              </button>
+              <div class="faq-body">
+                <p>
+                  <a data-support-mailto href="mailto:destek@loyaonline.com">
+                    <span data-support-email>destek@loyaonline.com</span>
+                  </a>
+                  adresinden bize ulaşabilirsin.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================== CTA BAND -->
+      <section class="section" style="padding-top: 0">
+        <div class="wrap">
+          <div class="cta-band reveal">
+            <span class="cta-deco d1" aria-hidden="true">?</span>
+            <span class="cta-deco d2" aria-hidden="true">★</span>
+            <h2>Bilgine güveniyorsan, sıra sende.</h2>
+            <p>
+              Loya Trivia'yı indir, ilk sorunu çöz ve liderlik tablosunda
+              yerini al.
+            </p>
+            <div class="store-row">
+              <a
+                class="store-badge store-badge--google"
+                href="#indir"
+                data-store="googlePlay"
+                aria-label="Google Play'den indir"
+              >
+                <img
+                  src="assets/img/badge-google-play.svg"
+                  alt="Google Play'den indir"
+                />
+              </a>
+              <a
+                class="store-badge store-badge--apple"
+                href="#indir"
+                data-store="appStore"
+                aria-label="App Store'dan indir"
+              >
+                <img
+                  src="assets/img/badge-app-store.svg"
+                  alt="App Store'dan indir"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================ FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <img src="assets/img/app-icon.png" alt="" />
+            <span data-app-name>Loya Trivia</span>
+          </a>
+          <p>
+            Bilgini eğlenceli ve rekabetçi bir mobil trivia deneyimine dönüştür.
+            <span data-publisher-name>Loya Online</span> tarafından geliştirilir.
+          </p>
+          <div class="footer-social" data-social-row></div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Keşfet</h4>
+          <a href="#modlar">Oyun Modları</a>
+          <a href="#nasil">Nasıl Oynanır</a>
+          <a href="#uygulama">Uygulama</a>
+          <a href="#sss">S.S.S.</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Yasal</h4>
+          <a href="privacy.html">Gizlilik Politikası</a>
+          <a href="terms.html">Şartlar ve Koşullar</a>
+          <a href="kvkk.html">KVKK Aydınlatma Metni</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>İletişim</h4>
+          <a data-support-mailto href="mailto:destek@loyaonline.com">
+            <span data-support-email>destek@loyaonline.com</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span
+          >© <span data-year>2026</span>
+          <span data-publisher-name>Loya Online</span>. Tüm hakları saklıdır.</span
+        >
+        <span>iOS &amp; Android için tasarlandı.</span>
+      </div>
+    </footer>
+
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
